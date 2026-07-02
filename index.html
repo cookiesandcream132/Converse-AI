@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        AI Conversation Practice
+    </title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+    
+
+    
+
+    <div id="landingPage"
+    class="landing-page">
+    
+    
+
+    
+
+    <div class="hero">
+
+        <h1 class="hero-title">
+
+            CONVERSE AI
+
+        </h1>
+
+        <p class="hero-slogan">
+
+            Every Great Conversation
+            Starts With Practice.
+
+        </p>
+
+        <p class="hero-description">
+
+            Practice interviews,
+            debates,
+            friendships,
+            public speaking
+            and difficult conversations
+            with AI.
+
+        </p>
+
+        <button id="enterAppBtn">
+
+            Enter App →
+
+        </button>
+
+    </div>
+
+</div>
+
+<div
+id="dashboard"
+style="display:none;">
+
+>
+
+    <div class="nav-bar">
+
+        <button class="tab-btn active" data-tab="chatTab">
+
+            Chat
+
+        </button>
+
+        <button class="tab-btn" data-tab="analyticsTab">
+
+
+            Analytics
+
+        </button>
+
+        <button class="tab-btn" data-tab="historyTab">
+
+            History
+
+        </button>
+
+        <button class="tab-btn" data-tab="settingsTab">
+
+            Settings
+
+        </button>
+
+    </div>
+
+    <div id="chatTab">
+
+        <div class="app-layout">
+
+            <!-- SIDEBAR -->
+
+            <div class="sidebar">
+
+                <h1>
+
+                    Converse AI
+
+                </h1>
+
+                <button id="newChatBtn">
+
+                    + New Chat
+
+                </button>
+
+                <div class="top-panel">
+
+                    <h3 class="section-title">
+
+                        Practice Modes
+
+                    </h3>
+
+                    <h3 class="section-title">
+
+                        Personality
+
+                    </h3>
+
+                    <select id="personalitySelect">
+
+                    </select>
+
+                    <div class="buttons">
+
+                        <button class="button">
+                            Interview
+                        </button>
+
+                        <button class="button">
+                            Making Friends
+                        </button>
+
+                        <button class="button">
+                            Debate
+                        </button>
+
+                        <button class="button">
+                            Difficult Conversation
+                        </button>
+
+                        <button class="button">
+                            Public Speaking
+                        </button>
+
+                    </div>
+
+                    <h3 class="section-title">
+
+                        Difficulty
+
+                    </h3>
+
+                    <div class="difficulty-buttons">
+
+                        <button class="difficulty active">
+                            Easy
+                        </button>
+
+                        <button class="difficulty">
+                            Normal
+                        </button>
+
+                        <button class="difficulty">
+                            Aggressive
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <p id="progressText">
+
+                    Progress: 0 / 5
+
+                </p>
+
+                <p id="xpText">
+                    ⭐ Level 1 | XP: 0
+                </p>
+
+                <button id="feedbackBtn">
+
+                    Get Feedback 📊
+
+                </button>
+
+                <button id = "reportBtn">
+                    📄 Session Report
+                </button>
+
+            </div>
+
+            <!-- CHAT -->
+
+            <div class="main-chat">
+
+                <div
+                    class="chat-box"
+                    id="chatBox"
+                >
+
+                    <div class="ai-message">
+
+                        Hi! Select a mode to begin.
+
+                    </div>
+
+                </div>
+
+                <div class="input-area">
+
+                 <input
+                      type="text"
+                     id="userInput"
+                       placeholder="Type here..."
+                  >
+
+                  <button id="sendBtn">
+                      Send
+                 </button>
+
+                 <button id="voiceBtn">
+                      🎤
+                 </button>
+
+                  <button id="speakBtn">
+                      🔊
+                  </button>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div
+    id="analyticsTab"
+    style="display:none;"
+    >
+
+          <div class="xp-card">
+
+              <div class="xp-circle">
+                <div class="xp-inner">
+                    <span id="levelText">
+                        Level 1
+                    </span>
+                </div>
+              </div>
+
+              <p id="xpNumber">
+                0 / 100 XP
+              </p>
+
+            </div>
+
+         <div class = "analytics-grid">
+            <div class = "stat-card">
+                <h2> Streak</h2>
+                <p id = "streakCount">
+                    0
+                </p>
+            </div>
+            <div class = "stat-card">
+                <h2> Time</h2> 
+                <p id = "practiceTime">
+                    0m
+                </p>
+            </div>
+            <div class = "stat-card">
+                <h2> Achievements</h2>
+                <p id = "achievementCount">
+                    0
+                </p>
+            </div>
+         </div>
+
+         <h2 class="analytics-heading">
+            Favorite Mode
+         </h2>
+         <div class = "stat-card">
+            <p id="favoriteMode">
+                None Yet
+            </p>
+         </div>
+
+         <h2 class="analytics-heading">
+            Mode Mastery
+         </h2>
+
+         <div id = "modeMastery">
+            
+         </div>
+
+
+         <div class="analytics-grid">
+
+            <div class="stat-card">
+
+                <h2>
+                    Sessions
+                </h2>
+
+                <p id="sessionCount">
+                    0
+                </p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h2>
+                    Messages
+                </h2>
+
+                <p id="messageTotal">
+                    0
+                </p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h2>
+                    Confidence
+                </h2>
+
+                <p>
+                    Coming Soon
+                </p>
+
+            </div>
+
+        </div>
+
+        <h2 style="margin-top:30px;">
+
+         🏆 Achievements
+
+        </h2>
+
+        <div
+          id="achievementList"
+          class="achievement-grid"
+        >
+
+        </div>
+
+
+    </div>
+
+    <div
+    id="historyTab"
+    style="display:none;"
+    >
+
+        <h2>
+
+            Conversation History
+
+        </h2>
+
+        <div id="historyList">
+
+        </div>
+
+    </div>
+
+    <div
+    id="settingsTab"
+    style="display:none;"
+    >
+
+        <h2>
+
+            Settings
+
+        </h2>
+
+        <p>
+
+            Theme:
+            Purple Neon
+
+        </p>
+
+        <p>
+
+            AI Model:
+            GPT-4o Mini
+
+        </p>
+
+    </div>
+
+</div>
+
+<div id="levelPopup">
+
+    🎉 LEVEL UP!
+
+</div>
+
+<script src="script.js"></script> 
+
+</body>
+
+</html>
