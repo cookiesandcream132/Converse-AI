@@ -25,7 +25,7 @@ The application provides multiple conversation modes, personalized AI responses,
 
 ## Architecture
 
-(Add your architecture diagram here)
+![Architecture](architecture.png)
 
 ---
 
