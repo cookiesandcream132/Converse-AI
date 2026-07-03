@@ -40,6 +40,28 @@ The application provides multiple conversation modes, personalized AI responses,
 
 ---
 
+
+## 📸 Screenshots
+
+### Landing Page
+
+![Landing Page](screenshots/landing.png)
+
+### Chat Interface
+
+![Chat Interface](screenshots/chat.png)
+
+### AI Session Report
+
+![Session Report Part 1](screenshots/report1.png)
+
+![Session Report Part 2](screenshots/report2.png)
+
+### Analytics Dashboard
+
+![Analytics Dashboard Part 1](screenshots/analytics1.png)
+
+![Analytics Dashboard Part 2](screenshots/analytics2.png)
 ## How it Works
 
 1. User selects a conversation mode.
